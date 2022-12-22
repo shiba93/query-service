@@ -21,17 +21,17 @@ docker-compose down --rmi all
 
 ##### Dump the collections in Mongodb
 
--> Connect to the mongo container
+-> Connect to the mongo container::
 docker exec -it query-service_mongodb_1 /bin/bash
 
-->Install Git
+->Install Git::
 apt-get -y update
 apt-get -y install git
 
--> Checkout sample data 
+-> Checkout sample data::
 git clone https://github.com/neelabalan/mongodb-sample-dataset.git
 
--> Run the script to import dump
+-> Run the script to import dump::
 cd mongodb-sample-dataset/
 chmod 755 script.sh
 ./script.sh localhost 27017
